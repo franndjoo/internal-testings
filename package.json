@@ -1,0 +1,12 @@
+{
+  "name": "@franndjoo/testings",
+  "version": "1.0.0",
+  "description": "A testing package I personnally use in all of my projects.",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["test", "testing", "test-units"],
+  "author": "Johan Montorfano <me@johanmontorfano.com>",
+  "license": "ISC"
+}
+
