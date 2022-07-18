@@ -1,6 +1,6 @@
 {
   "name": "@johanmnto/testings",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "A testing package I personnally use in all of my projects.",
