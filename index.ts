@@ -13,9 +13,11 @@ export function unit<T>(name: string, runner: () => T, expect: T) {
   const result = runner();
   console.timeLog(
     name,
-    "-> result: ",
+    "-> result:",
     result === expect ? "👌 Passed" : "❌ Fail"
   );
+
+  if(result !== expect) console.log("& runner output: " + result);
 }
 
 /** multiple test unit runner, tests to run can be filtered from the `testFilter` prop */

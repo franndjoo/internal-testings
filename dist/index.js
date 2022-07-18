@@ -5,7 +5,9 @@ exports.testPack = exports.unit = void 0;
 function unit(name, runner, expect) {
     console.time(name);
     const result = runner();
-    console.timeLog(name, "-> result: ", result === expect ? "👌 Passed" : "❌ Fail");
+    console.timeLog(name, "-> result:", result === expect ? "👌 Passed" : "❌ Fail");
+    if (result !== expect)
+        console.log("& runner output: " + result);
 }
 exports.unit = unit;
 /** multiple test unit runner, tests to run can be filtered from the `testFilter` prop */
