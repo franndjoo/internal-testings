@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
-    "outDir": "build/",
+    "target": "es2015",
+    "module": "commonjs",
     "declaration": true,
-    "target": "ES2015",
+    "outDir": "./dist",
+    "strict": true,
+    "allowJs": true
   },
-  "files": ["index.ts"]
+  "include": ["index.ts"],
+  "exclude": ["./dist"]
 }
