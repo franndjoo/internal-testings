@@ -29,7 +29,7 @@ export function unit<T>(name: string, runner: () => T, expect: T) {
     console.groupEnd();
     console.group("\x1b[31m↓ was expecting\x1b[0m");
     console.groupEnd();
-    console.group(expect,);
+    console.group(expect);
     console.groupEnd();
     console.groupEnd();
     console.groupEnd();

@@ -7,16 +7,18 @@ exports.autoCp = exports.eqOb = void 0;
 function eqOb(remote, local) {
     let ok = true;
     for (const attributeName in local) {
-        if (typeof local[attributeName] === "object") {
-            if (remote[attributeName] !== undefined &&
-                local[attributeName] !== undefined) {
-                ok = eqOb(remote[attributeName], local[attributeName]);
+        if (ok) {
+            if (typeof local[attributeName] === "object") {
+                if (remote[attributeName] !== undefined &&
+                    local[attributeName] !== undefined) {
+                    ok = eqOb(remote[attributeName], local[attributeName]);
+                }
+                else
+                    ok = false;
             }
             else
-                ok = false;
+                ok = local[attributeName] === remote[attributeName];
         }
-        else
-            ok = local[attributeName] === remote[attributeName];
     }
     return ok;
 }
